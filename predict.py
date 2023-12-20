@@ -17,6 +17,7 @@ def predict():
     parameters = request.get_json() # return a dict
 
     X = DataFrame.from_dict([parameters])
+    X = dv.transform(X)
     y_pred = model.predict(X)
 
     result = {
