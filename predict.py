@@ -3,7 +3,7 @@ import pickle
 from flask import Flask
 from flask import request
 from flask import jsonify
-from  pandas import DataFrame
+from pandas import DataFrame
 
 file = 'model.bin'
 
@@ -17,7 +17,7 @@ def predict():
     parameters = request.get_json() # return a dict
 
     X = DataFrame.from_dict([parameters])
-    X = dv.transform(X)
+    X = dv.transform([X])
     y_pred = model.predict(X)
 
     result = {
