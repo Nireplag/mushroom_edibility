@@ -1,8 +1,8 @@
 import requests
 
 
-url = 'http://localhost:9696/predict' # localhost test
-
+#url = 'http://localhost:9696/predict' # localhost test
+url = 'https://mushroom-edibility-2rtrkbrwna-uc.a.run.app/predict' # GCP deployment
 
 mushroom = {
     "cap_shape": 'x',
